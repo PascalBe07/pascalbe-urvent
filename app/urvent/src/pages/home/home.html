@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Near events</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list *ngIf="this.events; else Loading">
+    <ion-card *ngFor="let event of this.events | async">
+      <ion-item>
+        <ion-avatar item-start >
+          <img [src]="event.imageUrl">
+        </ion-avatar>
+        <h3>{{ event.name }}</h3>
+        <p>{{ event.date | date }}</p>
+      </ion-item>
+
+      <ion-card-content>
+        <p>{{ event.description }}</p>
+      </ion-card-content>
+
+      <ion-row>
+        <ion-col>
+          <button ion-button icon-left clear small>
+            <ion-icon name="add"></ion-icon>
+            <div>Remember</div>
+          </button>
+        </ion-col>
+        <ion-col>
+          <button ion-button icon-left clear small>
+            <ion-icon name="open"></ion-icon>
+            <div>Open</div>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+
+  </ion-list>
+</ion-content>
+
+<ng-template #Loading>
+
+</ng-template>
