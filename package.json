@@ -1,0 +1,15 @@
+{
+  "name": "urvent-app",
+  "version": "0.0.0",
+  "description": "App to find and share location-based events.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ionic",
+    "firebase"
+  ],
+  "author": "Pascal Betting (pascalbe)",
+  "license": "MIT"
+}
