@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Event: {{ this.event.name }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <img [src]="this.event.imageUrl" >
+    <ion-card-content>
+      <ion-note>
+        {{ this.event.date | date }}
+      </ion-note>
+      <ion-card-title>
+        {{ this.event.name | uppercase }}
+      </ion-card-title>
+      <p>
+        {{ this.event.description }}
+      </p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

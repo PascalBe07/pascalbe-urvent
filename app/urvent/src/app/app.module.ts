@@ -10,6 +10,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import {AngularFireModule} from "angularfire2";
 import {AngularFireDatabaseModule} from "angularfire2/database";
+import {SingleEventPage} from "../pages/singleEvent/singleEvent";
 
 const config = {
   apiKey: "AIzaSyAIJWn4Rn1SFANkQdrEOfQKajF4oOqYnXE",
@@ -24,7 +25,8 @@ const config = {
   declarations: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    SingleEventPage
   ],
   imports: [
     BrowserModule,
@@ -36,7 +38,8 @@ const config = {
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    SingleEventPage
   ],
   providers: [
     StatusBar,
