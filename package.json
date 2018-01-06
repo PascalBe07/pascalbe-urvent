@@ -4,12 +4,16 @@
   "description": "App to find and share location-based events.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "db:seed": "cd database && npm run build:seed && cd .. && firebase database:set -y / ./database/dummyData.json",
+    "db:rules": "firebase deploy --only database"
   },
   "keywords": [
     "ionic",
     "firebase"
   ],
   "author": "Pascal Betting (pascalbe)",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "firebase-tools": "^3.16.0"
+  }
 }

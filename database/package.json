@@ -1,7 +1,10 @@
 {
   "name": "urvent-app-database",
   "version": "0.0.0",
-  "scripts": {},
+  "scripts": {
+    "build:seed": "node fill-testData.js",
+    "build:rules": "echo 'build:rules script missing ...'"
+  },
   "keywords": [
     "firebase",
     "bolt"
