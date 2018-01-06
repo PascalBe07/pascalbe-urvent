@@ -6,6 +6,7 @@ before_script:
   - npm install
   - cd database
   - npm install
+  - cd ..
 
 script:
   - npm run db:seed
