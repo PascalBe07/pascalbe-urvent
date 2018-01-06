@@ -4,8 +4,8 @@
   "description": "App to find and share location-based events.",
   "main": "index.js",
   "scripts": {
-    "db:seed": "cd database && npm run build:seed && cd .. && firebase database:set -y / ./database/dummyData.json --token $firebase-token",
-    "db:rules": "firebase deploy --only database --token $firebase-token"
+    "db:seed": "cd database && npm run build:seed && cd .. && firebase database:set -y / ./database/dummyData.json --token $firebase_token",
+    "db:rules": "firebase deploy --only database --token $firebase_token"
   },
   "keywords": [
     "ionic",
