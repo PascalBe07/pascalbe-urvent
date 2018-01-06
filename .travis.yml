@@ -1,13 +1,14 @@
 language: node_js
 node_js:
-  - "node"
-
+- node
 before_script:
-  - npm install
-  - cd database
-  - npm install
-  - cd ..
-
+- npm install
+- cd database
+- npm install
+- cd ..
 script:
-  - npm run db:seed
-  - npm run db:rules
+- npm run db:seed
+- npm run db:rules
+env:
+  global:
+    secure: Ii7UsopIq1XH0SFY0w4kJEv1ZtUU5VItSZ+oQ/GqQM8qf50bQ3syDFXI1Apco4FIe6e5ToATTkrgRtjt6J+kRurJfVZRgecy7ow/5KAWZWH1IB+c9vekN+lRUyeEgiWqnbTmupya9XL9Gx1Bf5wO4we2fjQKDYMv7Aq3bxI81+tEiLSYZC/eJdg5wegpc91gO2qWpaAwEN7oznnyNgTsKLSekfMZOcB+ynFHoFDt9DF0h/U+0Hlyko82Xc3E1fH/whOD7G2wYnwrWHQJk8o9oA9B4zxjuTEMkWCOAQulTLzh1p4zoJuhZe+XjjmU2mA+WflJpzzb7rYHBiQ82CiN/FuoFUskf/w0xDDgUHGKbKvwwMdqKe449GC3tnmzgGyyd20vYwLuX6OXa4lfQgnpMESTX5mPHq5iN/y8pBXMYiwV5RrEBn9UMDpA+Jzaq7cy5dodD/x3i0ioaW4gmKwFx85p1un+r2uDyWDXDypPUwCvBk/SN8svf5cYuF8D/jXVUO3TGM3i059AvnVap7LqySOjAe151k++TmeDVF4hufl7UJL24IGD+vjDH3wg1Het7Q9ES7uQJfRQQWLjDwRLgqjoam2pHWOz0JzSxZXRXNMv3wSc7giGZu0pJeF8LThwwIYJ6xoc2QCFF80/eIWyvREZbbwc6GJRlz7mhmJsRvY=
