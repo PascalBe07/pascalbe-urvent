@@ -2,11 +2,11 @@ language: node_js
 node_js:
   - "node"
 
-  before_script:
+before_script:
   - npm install
   - cd database
   - npm install
 
-  script:
+script:
   - npm run db:seed
   - npm run db:rules
