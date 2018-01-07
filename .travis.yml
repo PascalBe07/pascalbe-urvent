@@ -1,6 +1,11 @@
 language: node_js
 node_js:
 - node
+
+before_install:
+- export DISPLAY=:99.0
+- sh -e /etc/init.d/xvfb start
+
 before_script:
 - npm install
 - cd database
@@ -8,10 +13,12 @@ before_script:
 - cd ../app/urvent
 - npm install
 - cd ..
+
 script:
 - npm run db:seed
 - npm run db:rules
 - npm run app:test
+
 env:
   global:
   - secure: aNE1HiNflbpw14t8ZGLgNf+SvRr4dA0tfcViIrriBfX2VyC7jw3OFL2is6Jpt/OnYT+s6mmMz//FIscdTDCR0FZ5Bfku8gYCWlzRoDEMYgcdaql33bqY0r/j3llPQe4e5kQYYrzVvQP+LOl2HrFmK64f2xawSJWnuunt527LpvtVUiV7ShzUfA8aCWJmrJO8/8vvHG9qL4ZgB21JnECX6MNMANG2wfwuYALWPrgNAenMU8OymV3QwsVpjXRHiGFgosN342ds0JaiFyMnxc+XtFw/IZoMg4nk836qZEw1qooKZPcG3PH5HrkyOYocJNtNKvlW8go/O6Gg85q48/MjboF/CbG7UAaTVYhzdagP9hCGX6AxJm0mwL0bhdEX4lFMMtGHJIlx35/h5AX1C3h3M1dWlrYmPmkNQpX2eksxNV3s6Il4mySTGWyEgTjRcE8MwCr82GZT3F0luvC3MvSpQYKbmWuvqH/f5lZ232J3s5KpqxvJyz7rXenzCWLeu1UGKMyb/5S/++bnIKkH+SJlK+poXMZDtuweWOVlAq60jSpnd6IZO39L1eZuCPn1Zn3q4Okpz9/SkhWtMiyjuzcao3koboHgFrdbWqbn0sSA0kQ4MVa/OkE7z6RT3eq1TWT+bGMFLzj1d6G/iAarCoqsA5AA3gCR66qlOerFX6+8wmE=
