@@ -1,0 +1,6 @@
+www
+node_modules
+.sourcemaps
+Dockerfile
+.gitignore
+.editorconfig

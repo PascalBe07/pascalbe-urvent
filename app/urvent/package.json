@@ -1,15 +1,15 @@
 {
   "name": "urvent",
   "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "http://ionicframework.com/",
+  "author": "Pascal Betting (pascalbe)",
   "private": true,
   "scripts": {
     "clean": "ionic-app-scripts clean",
     "lint": "ionic-app-scripts lint",
     "test": "karma start",
     "build": "ionic-app-scripts build",
-    "serve": "ionic-app-scripts serve"
+    "serve": "ionic-app-scripts serve --lab",
+    "serve:ci": "ionic-app-scripts serve --nobrowser"
   },
   "dependencies": {
     "@angular/common": "5.0.3",
@@ -43,5 +43,5 @@
     "karma-jasmine": "^1.1.1",
     "typescript": "2.4.2"
   },
-  "description": "An Ionic project"
+  "description": "App to find and share location-based events."
 }
