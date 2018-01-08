@@ -1,4 +1,4 @@
-# Use alpine image because it is the smallest
+# Use latest node js image as base to have npm installed
 FROM node:latest
 
 # Copy the ionic project content to docker image
