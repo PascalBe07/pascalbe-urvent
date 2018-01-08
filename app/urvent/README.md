@@ -6,7 +6,7 @@
 
 ### Steps
 * clone the source code with git clone **https://github.com/PascalBe07/pascalbe-urvent.git**
-* cd to that folder with **cd pascalbe-urvent**
+* cd to app folder with **cd pascalbe-urvent\app\urvent**
 * build a docker image with **docker build -t pascalbe-urvent .**
 * run a docker container instance with **docker run -d -p 8080:8100 pascalbe-urvent**
 * open a browser of your choice and navigate to **localhost:8080/ionic-lab**
