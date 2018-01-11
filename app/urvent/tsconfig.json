@@ -16,6 +16,11 @@
       "../node_modules/@types"
     ]
   },
+
+  "angularCompilerOptions": {
+    "fullTemplateTypeCheck": true
+  },
+
   "include": [
     "src/**/*.ts"
   ],
