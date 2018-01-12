@@ -12,7 +12,7 @@ import {SingleEventPage} from "../singleEvent/singleEvent";
 })
 export class HomePage implements OnInit {
 
-  public events: Observable<any[]>;
+  public events: Observable<IEvent[]>;
 
   constructor(public navCtrl: NavController, private db: AngularFireDatabase) {
 

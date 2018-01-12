@@ -8,8 +8,8 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-list *ngIf="this.events; else Loading">
-    <ion-card *ngFor="let event of this.events | async">
+  <ion-list *ngIf="events; else Loading">
+    <ion-card *ngFor="let event of events | async">
       <ion-item>
         <ion-avatar item-start >
           <img [src]="event.imageUrl">
@@ -30,7 +30,7 @@
           </button>
         </ion-col>
         <ion-col>
-          <button ion-button icon-left [clear]="true" (click)="this.openEvent(event)" >
+          <button ion-button icon-left [clear]="true" (click)="openEvent(event)" >
             <ion-icon name="open"></ion-icon>
             <div>Open</div>
           </button>

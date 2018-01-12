@@ -35,12 +35,16 @@
   "devDependencies": {
     "@ionic/app-scripts": "3.1.6",
     "@types/jasmine": "^2.8.3",
+    "@types/jasminewd2": "^2.0.3",
     "@types/node": "^8.5.7",
-    "jasmine": "^2.8.0",
-    "karma": "^2.0.0",
+    "jasmine": "2.8.0",
+    "jasmine-spec-reporter": "^4.2.1",
+    "karma": "2.0.0",
     "karma-chrome-launcher": "^2.2.0",
-    "karma-firefox-launcher": "^1.1.0",
     "karma-jasmine": "^1.1.1",
+    "karma-typescript": "^3.0.9",
+    "protractor": "5.2.2",
+    "ts-node": "^4.1.0",
     "typescript": "2.6"
   },
   "description": "App to find and share location-based events."

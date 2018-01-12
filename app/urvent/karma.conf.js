@@ -4,18 +4,22 @@
 module.exports = function (config) {
   var configuration = {
 
+    karmaTypescriptConfig: {
+      tsconfig: "tsconfig.spec.json"
+    },
+
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',
 
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['jasmine'],
+    frameworks: ['jasmine', 'karma-typescript'],
 
 
     // list of files / patterns to load in the browser
     files: [
-      'src/**/*.spec.js'
+      'src/**/*.spec.ts'
     ],
 
 
@@ -27,13 +31,14 @@ module.exports = function (config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+      "src/**/*.ts": "karma-typescript"
     },
 
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['dots'],
+    reporters: ['dots', "karma-typescript"],
 
 
     // web server port
@@ -74,9 +79,9 @@ module.exports = function (config) {
     concurrency: Infinity
   };
 
-  if (process.env.TRAVIS) {
-    configuration.browsers = ["Chrome_travis_ci"];
-  }
+  // if (process.env.TRAVIS) {
+  //   configuration.browsers = ["Chrome_travis_ci"];
+  // }
 
   config.set(configuration);
 };
