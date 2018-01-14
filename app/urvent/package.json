@@ -8,8 +8,11 @@
     "lint": "ionic-app-scripts lint",
     "test": "karma start",
     "build": "ionic-app-scripts build",
-    "serve": "ionic-app-scripts serve --lab",
-    "serve:ci": "ionic-app-scripts serve --nobrowser"
+    "start": "ionic-app-scripts serve --lab &",
+    "e2e": "webdriver-manager update && protractor",
+    "serve": "http-server ./www -p 10100 -a 127.0.0.1",
+    "serve:ci": "http-server ./www -p 10100 -a 127.0.0.1 &",
+    "e2e:ci": "npm run build && npm run serve:ci && npm run e2e"
   },
   "dependencies": {
     "@angular/common": "~5.2.0",
@@ -37,6 +40,7 @@
     "@types/jasmine": "^2.8.3",
     "@types/jasminewd2": "^2.0.3",
     "@types/node": "^8.5.7",
+    "http-server": "^0.11.1",
     "jasmine": "2.8.0",
     "jasmine-spec-reporter": "^4.2.1",
     "karma": "2.0.0",
