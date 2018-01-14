@@ -13,6 +13,9 @@ exports.config = {
   ],
   capabilities: {
     'browserName': 'chrome',
+    'chromeOptions': {
+      'args': ['no-sandbox']
+    },
     'shardTestFiles': true,
     'maxInstances': 5
   },
