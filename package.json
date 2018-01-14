@@ -4,9 +4,10 @@
   "description": "App to find and share location-based events.",
   "main": "index.js",
   "scripts": {
-    "db:seed": "cd database && npm run build:seed && cd .. && firebase database:set -y / ./database/dummyData.json --token $firebase_token",
-    "db:rules": "firebase deploy --only database --token $firebase_token",
-    "app:test": "cd app/urvent && npm run test"
+    "db:seed": "cd /database && npm run build:seed && cd / && firebase database:set -y / ./database/dummyData.json --token $firebase_token",
+    "db:rules": "cd / && firebase deploy --only database --token $firebase_token",
+    "app:test": "cd /app/urvent && npm run test",
+    "app:e2e": "cd /app/urvent && npm run e2e:ci"
   },
   "keywords": [
     "ionic",
