@@ -5,7 +5,7 @@ module.exports = function (config) {
   var configuration = {
 
     karmaTypescriptConfig: {
-      tsconfig: "tsconfig.spec.json"
+      tsconfig: "src/tsconfig.json"
     },
 
     // base path that will be used to resolve all patterns (eg. files, exclude)

@@ -11,10 +11,7 @@
     "module": "es2015",
     "moduleResolution": "node",
     "sourceMap": true,
-    "target": "es5",
-    "typeRoots": [
-      "../node_modules/@types"
-    ]
+    "target": "es5"
   },
 
   "angularCompilerOptions": {
@@ -26,11 +23,7 @@
   ],
   "exclude": [
     "node_modules",
-    "src/**/*.spec.ts",
-    "src/**/__tests__/*.ts"
+    "src/**/*.spec.ts"
   ],
-  "compileOnSave": false,
-  "atom": {
-    "rewriteTsconfig": false
-  }
+  "compileOnSave": false
 }
