@@ -14,9 +14,9 @@ before_install:
 
 before_script:
   - npm install
-  - cd /database
+  - cd ~/database
   - npm install
-  - cd /app/urvent
+  - cd ~/app/urvent
   - npm install
 
 script:
